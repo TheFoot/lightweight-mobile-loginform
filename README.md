@@ -2,7 +2,7 @@
 
 This is a simple login form built using HTML5. It targets non-responsive browsers (e.g. IE6), then small-screen mobile devices and progressively enhances upwards to fully responsive modern desktop browsers.
 
-Use it as a base to build on or extend it as you please..
+Use it as a base to build on or extend it as you please.. See a demo here: http://thefoot.github.com/lightweight-mobile-loginform/
 
 It performs simple required field validation and displays errors inline.
 
