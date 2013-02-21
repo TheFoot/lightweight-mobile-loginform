@@ -1,5 +1,4 @@
-lightweight-loginform-nativejs
-==============================
+# Lightweight Mobile Friendly Login Form
 
 This is a simple login form built using HTML5. It targets non-responsive browsers (e.g. IE6), then small-screen mobile devices and progressively enhances upwards to fully responsive modern desktop browsers.
 
@@ -13,10 +12,9 @@ Javascript and CSS is combined and minified (uncompressed source in `/js` and `/
 
 It weighs in at a total page weight of 33kb, but 10kb on phones (without the background image) - perfect for poor (2G) connection speeds.
 
-Jasmine unit tests included: <pre>/tests/formvalidator.html</pre>
+Jasmine unit tests included: `/tests/formvalidator.html`
 
-Supported / Tested Browsers and Devices
----------------------------------------
+## Supported Browsers and Devices
 
 - IE 6+
 - Chrome 13+
