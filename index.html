@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="Barry Jones (barry@onalldevices.com)">
+	<title>Lightweight Login Form</title>
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Normalize tags and apply page styles -->
+	<link href="css/normalize.min.css" media="all" rel="stylesheet"/>
+	<!--<link href="css/styles.css" media="all" rel="stylesheet"/>-->
+	<link href="css/styles.min.css" media="all" rel="stylesheet"/>
+
+</head>
+<body>
+
+    <section id="page" class="login">
+
+        <!-- Header -->
+        <header>
+            <h1>Welcome to example.com</h1>
+        </header>
+
+        <!-- Login form -->
+        <section id="loginform">
+            <form action="/php/login" method="post" novalidate>
+
+                <h3>Please login:</h3>
+                <p>Enter your user id and password to login.</p>
+
+                <!-- User ID -->
+                <fieldset>
+                    <label for="user_id">User ID:</label>
+                    <input type="text" id="user_id" name="user_id" autofocus required tabindex="1" />
+                    <span class="validationerror hidden">User ID is a required field!</span>
+                </fieldset>
+
+                <!-- Password -->
+                <fieldset>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required tabindex="2" />
+                    <span class="validationerror hidden">Password is a required field!</span>
+                </fieldset>
+
+                <!-- Submit -->
+                <fieldset class="actionbar">
+                    <button type="submit" value="Login">Login</button>
+                </fieldset>
+
+            </form>
+        </section>
+
+    </section>
+
+	<!-- Namespace script and login form script -->
+	<!--<script src="js/ns.js"></script>
+	<script src="js/login.js"></script>-->
+	<script src="js/all.min.js"></script>
+
+</body>
+</html>

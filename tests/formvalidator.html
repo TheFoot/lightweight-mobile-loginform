@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Test Form Validator</title>
+
+	<link rel="shortcut icon" type="image/png" href="lib/jasmine-1.3.1/jasmine_favicon.png">
+	<link rel="stylesheet" type="text/css" href="lib/jasmine-1.3.1/jasmine.css">
+	<script type="text/javascript" src="lib/jasmine-1.3.1/jasmine.js"></script>
+	<script type="text/javascript" src="lib/jasmine-1.3.1/jasmine-html.js"></script>
+
+</head>
+
+<body>
+
+	<!-- Test Forms -->
+	<div style="display: none;">
+
+		<!-- Invalid form - no user id or password -->
+		<form id="test1" action="#" method="post" novalidate>
+			<input type="text" name="user_id" required value="" />
+			<span class="validationerror hidden">User ID is a required field!</span>
+			<input type="password" name="password" required value="" />
+			<span class="validationerror hidden">Password is a required field!</span>
+			<button id="submit1" type="submit" value="Login">Login</button>
+		</form>
+
+		<!-- Invalid form - no password -->
+		<form id="test2" action="#" method="post" novalidate>
+			<input type="text" name="user_id" required value="auser" />
+			<span class="validationerror hidden">User ID is a required field!</span>
+			<input type="password" name="password" required value="" />
+			<span class="validationerror hidden">Password is a required field!</span>
+			<button id="submit2" type="submit" value="Login">Login</button>
+		</form>
+
+		<!-- Valid form -->
+		<form id="test3" action="#" method="post" novalidate>
+			<input type="text" name="user_id" required value="auser" />
+			<span class="validationerror hidden">User ID is a required field!</span>
+			<input type="password" name="password" required value="apassword" />
+			<span class="validationerror hidden">Password is a required field!</span>
+			<button id="submit3" type="submit" value="Login">Login</button>
+		</form>
+
+	</div>
+
+	<!-- Source files -->
+	<script src="../js/ns.js"></script>
+
+	<!-- Test spec -->
+	<script src="spec/formValidator.js"></script>
+
+	<!-- Kick-off -->
+	<script type="text/javascript">
+		(function() {
+			var jasmineEnv = jasmine.getEnv();
+			jasmineEnv.updateInterval = 1000;
+
+			var htmlReporter = new jasmine.HtmlReporter();
+
+			jasmineEnv.addReporter(htmlReporter);
+
+			jasmineEnv.specFilter = function(spec) {
+				return htmlReporter.specFilter(spec);
+			};
+
+			var currentWindowOnload = window.onload;
+
+			window.onload = function() {
+				if (currentWindowOnload) {
+					currentWindowOnload();
+				}
+				execJasmine();
+			};
+
+			function execJasmine() {
+				jasmineEnv.execute();
+			}
+
+		})();
+	</script>
+
+</body>
+</html>
