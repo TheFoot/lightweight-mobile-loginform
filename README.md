@@ -9,14 +9,14 @@ It performs simple required field validation and displays errors inline.
 
 It uses native JavaScript (no JS frameworks), it's object-oriented and un-obtrusive.
 
-Javascript and CSS is combined and minified (uncompressed source in /js and /css folders).
+Javascript and CSS is combined and minified (uncompressed source in `/js` and `/css` folders).
 
 It weighs in at a total page weight of 33kb, but 10kb on phones (without the background image) - perfect for poor (2G) connection speeds.
 
-Jasmine unit tests included: /tests/formvalidator.html
+Jasmine unit tests included: <pre>/tests/formvalidator.html</pre>
 
 Supported / Tested Browsers and Devices
-=======================================
+---------------------------------------
 
 - IE 6+
 - Chrome 13+
