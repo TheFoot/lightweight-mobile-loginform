@@ -4,10 +4,6 @@ This is a simple login form built using HTML5. It targets non-responsive browser
 
 Use it as a base to build on or extend it as you please.. 
 
-**Demo: http://thefoot.github.com/lightweight-mobile-loginform/**
-
-**Unit Test: http://thefoot.github.com/lightweight-mobile-loginform/tests/formvalidator.html**
-
 It performs simple required field validation and displays errors inline.
 
 It uses native JavaScript (no JS frameworks), it's object-oriented and un-obtrusive.
